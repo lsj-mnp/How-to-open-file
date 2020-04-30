@@ -8,7 +8,13 @@ public:
 	~TextFile();
 
 public:
-	void openAndRead(const char* fileName);
+	void load(const char* fileName);
+
+	void save(const char* fileName);
+
+	void clear();
+
+	void write(const char* data);
 
 	void display() const;
 
