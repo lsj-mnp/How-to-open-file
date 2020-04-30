@@ -1,4 +1,5 @@
 ﻿#include "TextFile.h"
+#include "BinaryFile.h"
 
 int main()
 {
@@ -12,11 +13,31 @@ int main()
 
 	//textFile.write("마른 하늘을 달려\n나 그대에게 안길수만 있으면\n내 몸 부서진대도 좋아\n");
 
-	textFile.write("123456789");
+	/*textFile.write("123456789");
 
 	textFile.save("C:/Users/munop/OneDrive/바탕 화면/TestC.txt");
 
-	textFile.clear();
+	textFile.clear();*/
+
+	BinaryFile binaryFile{};
+
+	//binaryFile.load("C:/Users/munop/OneDrive/바탕 화면/TestC.txt");
+
+	/*binaryFile.write('l');
+	binaryFile.write('s');
+	binaryFile.write('j');
+
+	binaryFile.write(123'456'789);
+
+	binaryFile.save("C:/Users/munop/OneDrive/바탕 화면/TestD.txt");*/
+	
+	binaryFile.load("C:/Users/munop/OneDrive/바탕 화면/TestD.txt");
+
+	binaryFile.readChar();
+	binaryFile.readChar();
+	binaryFile.readChar();
+
+	int32 a{ binaryFile.readInt32() };
 
 	return 0;
 }
